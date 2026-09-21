@@ -1,0 +1,31 @@
+# 認証情報・環境設定（Dokku の環境変数に置く。リポジトリには含めない）
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+
+# Django
+db.sqlite3
+/staticfiles/
+/media/
+
+# 生成物（発注書 PDF など）
+/var/
+/output/
+*.log
+
+# エディタ・OS
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,11 @@
+{
+  "name": "iec-ec-bridge",
+  "description": "イイダ眼科医院 患者限定EC（Shopify）と FileMaker の連携サービス",
+  "cron": [
+    {"command": "python manage.py sync_rx", "schedule": "30 2 * * *"},
+    {"command": "python manage.py generate_po", "schedule": "0 9 * * 1-6"}
+  ],
+  "healthchecks": {
+    "web": [{"type": "startup", "name": "healthz", "path": "/healthz", "attempts": 5}]
+  }
+}
